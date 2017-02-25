@@ -1,0 +1,4 @@
+This add-in is incompatible with KatMouse and similar software.
+Excel must be added to application ignore list in KatMouse options.
+
+32-bit and 64-bit add-in are installed side-by-side on 64-bit Windows.

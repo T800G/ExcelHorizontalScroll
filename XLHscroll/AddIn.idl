@@ -1,0 +1,26 @@
+// AddIn.idl : IDL source for AddIn
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddIn.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(5F143DE6-5DB3-48c2-83D8-26B5DFFA55F7),
+	version(1.0),
+	helpstring("XLHScroll 1.0 Type Library")
+]
+library XLHScrollLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(8092DE61-56F8-4c09-9AD9-9AE1A0732176),
+		helpstring("Connect Class")
+	]
+	coclass Connect
+	{
+		[default] interface IUnknown;
+	};
+};

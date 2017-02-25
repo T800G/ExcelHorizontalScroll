@@ -1,0 +1,59 @@
+HKLM
+{
+	NoRemove Software
+	{
+		NoRemove Classes
+		{
+			XLHScroll.Connect.1 = s 'XLHScroll.Connect Class'
+			{
+				CLSID = s '{8092DE61-56F8-4c09-9AD9-9AE1A0732176}'
+			}
+			XLHScroll.Connect = s 'XLHScroll.Connect Class'
+			{
+				CLSID = s '{8092DE61-56F8-4c09-9AD9-9AE1A0732176}'
+				CurVer = s 'XLHScroll.Connect.1'
+			}
+			NoRemove CLSID
+			{
+				ForceRemove '{8092DE61-56F8-4c09-9AD9-9AE1A0732176}' = s 'XLHScroll.Connect Class'
+				{
+					ProgID = s 'XLHScroll.Connect.1'
+					VersionIndependentProgID = s 'XLHScroll.Connect'
+					ForceRemove 'Programmable'
+					InprocServer32 = s '%MODULE%'
+					{
+						val ThreadingModel = s 'Apartment'
+					}
+					'TypeLib' = s '{5F143DE6-5DB3-48c2-83D8-26B5DFFA55F7}'
+				}
+			}
+		}
+	}
+}
+
+HKCU
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Office
+			{
+				NoRemove Excel
+				{
+					NoRemove Addins
+					{
+						ForceRemove XLHScroll.Connect
+						{
+							val LoadBehavior = d 3
+							val CommandLineSafe = d 0
+							val CommandPreload = d 0
+							val FriendlyName = s 'Excel Horizontal Scroll Add-In'
+							val Description = s 'Excel Horizontal Scroll Add-In'
+						}
+					}
+				}
+			}
+		}
+	}
+}
